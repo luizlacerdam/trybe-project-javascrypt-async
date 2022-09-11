@@ -27,7 +27,7 @@ function createHTML(data) {
                       <img src="./img/${symbol}.png">
                       <h3 class="simbolo">${symbol}</h3>
                       <h4 class="nome">${name}</h4>
-                      <h4 class="price">${parseFloat(priceUsd).toFixed(2)}<h4>
+                      <h4 class="price">$${parseFloat(priceUsd).toFixed(2)}<h4>
                       
                       </section>`;
   ul.appendChild(element);
