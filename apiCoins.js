@@ -19,15 +19,22 @@ const fetchCoins = async () => {
 function filtroTenFirsts() {
   return fetchCoins().then((data) => data.filter((element) => element.rank <= 10));
 }
-function createHTML(nome, simbolo, preco) {
+function createHTML(data) {
+  const { symbol, name, priceUsd, explorer } = data;
   const ul = document.getElementById('coins-list');
   const element = document.createElement('li');
-  element.innerText = `${nome} (${simbolo}): ${parseFloat(preco, 10).toFixed(2)}`;
+  element.innerHTML = `<section class="cartao">
+                      <img src="./img/${symbol}.png">
+                      <h3 class="simbolo">${symbol}</h3>
+                      <h4 class="nome">${name}</h4>
+                      <h4 class="price">${parseFloat(priceUsd).toFixed(2)}<h4>
+                      
+                      </section>`;
   ul.appendChild(element);
 }
 
 function makeData() {
   filtroTenFirsts().then((data) => data.forEach((element) => 
-    createHTML(element.name, element.symbol, element.priceUsd)));
+    createHTML(element)));
 }
 makeData();
