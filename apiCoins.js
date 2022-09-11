@@ -16,16 +16,18 @@ const fetchCoins = async () => {
   .catch((error) => console.log(`Error! Algo deu errado: ${error}`));
 };
 // return array
-
+function filtroTenFirsts() {
+  return fetchCoins().then((data) => data.filter((element) => element.rank <= 10));
+}
 function createHTML(nome, simbolo, preco) {
   const ul = document.getElementById('coins-list');
   const element = document.createElement('li');
-  element.innerText = `${nome} (${simbolo}): ${preco}`;
+  element.innerText = `${nome} (${simbolo}): ${parseFloat(preco, 10).toFixed(2)}`;
   ul.appendChild(element);
 }
 
 function makeData() {
-  fetchCoins().then((data) => data.forEach((element) => 
+  filtroTenFirsts().then((data) => data.forEach((element) => 
     createHTML(element.name, element.symbol, element.priceUsd)));
 }
 makeData();
