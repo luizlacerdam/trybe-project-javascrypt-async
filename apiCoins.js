@@ -20,7 +20,7 @@ function filtroTenFirsts() {
   return fetchCoins().then((data) => data.filter((element) => element.rank <= 10));
 }
 function createHTML(data) {
-  const { symbol, name, priceUsd, explorer } = data;
+  const { symbol, name, priceUsd } = data;
   const ul = document.getElementById('coins-list');
   const element = document.createElement('li');
   element.innerHTML = `<section class="cartao">
