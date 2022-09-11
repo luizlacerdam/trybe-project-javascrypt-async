@@ -15,6 +15,7 @@ nav {
 li {
   list-style-type: none;
   margin: 10px;
+  
 }
 
 ul {
@@ -22,6 +23,7 @@ ul {
   flex-wrap: wrap;
   width: 1600px;
   justify-content: space-around;
+  padding: 0px;
 }
 .cartao {
 display: flex;
@@ -29,9 +31,10 @@ flex-direction: column;
 align-items: center;
 width: 250px;
 height: 250px;
-border: 1px rgb(155, 155, 155) solid;
+
 border-radius: 10px;
 margin-top: 25px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 h3 {
