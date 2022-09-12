@@ -23,13 +23,7 @@ function createHTML(data) {
   const { symbol, name, priceUsd } = data;
   const ul = document.getElementById('coins-list');
   const element = document.createElement('li');
-  element.innerHTML = `<section class="cartao">
-                      <img src="./img/${symbol}.png">
-                      <h3 class="simbolo">${symbol}</h3>
-                      <h4 class="nome">${name}</h4>
-                      <h4 class="price">$${parseFloat(priceUsd).toFixed(2)}<h4>
-                      
-                      </section>`;
+  element.innerHTML = `${name} (${symbol}): ${parseFloat(priceUsd).toFixed(2)}`;
   ul.appendChild(element);
 }
 
