@@ -1,10 +1,24 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Boas vindas ao projeto JavaScrypt Async!
+  Projeto individual durante o curso de desenvolvimento web na trybe.
+
+  Esse projeto foi feito para praticar habilidades de requisição e manipulação de dados de APIs.
+
+## Habilidades
+- Criação de elementos através do javaScript;
+
+- Requisição e manipulação de dados de APIs;
+
+- CSS Flexbox;
+
+## Veja o resultado a seguir do projeto pronto:
+  ![exemplo do TrybeWarts](./javascryptAsync.png)
+
+## Requisitos Obrigatorios:
+
+    ✅ 1. Vamos consultar uma `API` que fornece os valores de crypto moedas.
+
+    ✅ 2. Agora, vamos fazer com que as moedas apareçam na tela.
+
+    ✅ 3. Mostrando somente as 10 primeiras moedas da requisição.
+
+
