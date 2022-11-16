@@ -12,8 +12,8 @@ const fetchCoins = async () => {
 
   const request = fetch(url);
   return request.then((response) => response.json())
-  .then((data) => data.data)
-  .catch((error) => console.log(`Error! Algo deu errado: ${error}`));
+    .then((data) => data.data)
+    .catch((error) => console.log(`Error! Algo deu errado: ${error}`));
 };
 // return array
 function filtroTenFirsts() {
@@ -23,12 +23,17 @@ function createHTML(data) {
   const { symbol, name, priceUsd } = data;
   const ul = document.getElementById('coins-list');
   const element = document.createElement('li');
-  element.innerHTML = `${name} (${symbol}): ${parseFloat(priceUsd).toFixed(2)}`;
+  element.innerHTML = `<section class="card">
+  <img src="./img/${symbol}.png" alt="${symbol} coin">
+  <h3 class="simbolo">${symbol}</h3>
+  <h4 class="nome">${name}</h4>
+  <h4 class="price">${parseFloat(priceUsd).toFixed(2)}</h4>
+</section>`;
   ul.appendChild(element);
 }
 
 function makeData() {
-  filtroTenFirsts().then((data) => data.forEach((element) => 
+  filtroTenFirsts().then((data) => data.forEach((element) =>
     createHTML(element)));
 }
 makeData();

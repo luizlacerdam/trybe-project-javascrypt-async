@@ -29,7 +29,7 @@ ul {
   padding: 0;
 }
 
-.cartao {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
